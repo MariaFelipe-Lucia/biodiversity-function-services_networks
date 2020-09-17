@@ -7,7 +7,7 @@
 
 ## DATA REQUIRED ####
 # Data to reproduce the analyses is available at https://www.bexis.uni-jena.de/PublicData/SearchPublicData.aspx 
-# Use the ID number for the search.
+# Use the ID number for the search. For the synthesis datasets, individual dataset IDs can be found in the Supplementary Methods of the paper (Felipe-Lucia et al. 2020 PNAS).
 # Please note that some datasets will only be available after an embargo period of around 3 years after data collection.
 
 # ID 21766: here I used the 190411_EP_species_diversity_GRL.txt # check last update!!
