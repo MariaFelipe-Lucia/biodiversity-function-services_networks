@@ -1799,7 +1799,7 @@ Grass_modules_long_low <- subset(Grass_modules_long,variable=="Low land-use inte
 Grass_modules_long_high <- subset(Grass_modules_long,variable=="High land-use intensity")
 Grass_modules_long_high <- cbind(Grass_modules_long_low,Grass_modules_long_high)
 
-#order 1บ by value + 2บ by variable name at low LUI
+#order 1ยบ by value + 2ยบ by variable name at low LUI
 Grass_modules_long_high<-Grass_modules_long_high[order(Grass_modules_long_high$value,Grass_modules_long_high$Variable_name),]
 #order High Lui by Value
 names(Grass_modules_long_high)
@@ -1852,7 +1852,7 @@ Forest_modules_long_low <- subset(Forest_modules_long,variable=="Low land-use in
 Forest_modules_long_high <- subset(Forest_modules_long,variable=="High land-use intensity")
 Forest_modules_long_high <- cbind(Forest_modules_long_low,Forest_modules_long_high)
 
-#order 1บ by value + 2บ by variable name at low LUI
+#order 1ยบ by value + 2ยบ by variable name at low LUI
 Forest_modules_long_high<-Forest_modules_long_high[order(Forest_modules_long_high$value,Forest_modules_long_high$Variable_name),]
 #order High Lui by Value
 names(Forest_modules_long_high)
@@ -2171,7 +2171,7 @@ plot_BD<-(subset(Selected.NodesLUI,Node_type=="BD")) %>%
         axis.text.x.bottom= element_blank(),
         axis.ticks.x= element_blank(),
         strip.text.y = element_blank())+
-  geom_smooth( method = "loess",span = 0.5, se= FALSE) #alt, span=0.8 or 0.3
+  geom_smooth( method = "loess",span = 0.3, se= FALSE) #alt, span=0.8 or 0.3
 
 plot_EF<-(subset(Selected.NodesLUI,Node_type=="EF")) %>% 
   ggplot(aes(x=mean_LUI,y=degree_2w,colour=factor(Variable_name)))+
@@ -2191,7 +2191,7 @@ plot_EF<-(subset(Selected.NodesLUI,Node_type=="EF")) %>%
         axis.ticks.x= element_blank(),
         strip.text.x = element_blank(),
         strip.text.y = element_blank())+
-  geom_smooth( method = "loess",span = 0.5, se= FALSE) #method="gam", formula = y ~s(x);span=0.3 or 0.8
+  geom_smooth( method = "loess",span = 0.3, se= FALSE) #method="gam", formula = y ~s(x);span=0.3 or 0.8
 
 plot_ES<-(subset(Selected.NodesLUI,Node_type=="ES")) %>% 
   ggplot(aes(x=mean_LUI,y=degree_2w,colour=factor(Variable_name)))+
@@ -2209,7 +2209,7 @@ plot_ES<-(subset(Selected.NodesLUI,Node_type=="ES")) %>%
         legend.key.size = unit(0.7, 'lines'),
         strip.text.x = element_blank(),
         strip.text.y = element_blank())+
-  geom_smooth( method = "loess",span = 0.5, se= FALSE) #method="gam", formula = y ~s(x); span=0.3 or 0.8
+  geom_smooth( method = "loess",span = 0.3, se= FALSE) #method="gam", formula = y ~s(x); span=0.3 or 0.8
 
 windows()
 plots_Fig4 <- AlignPlots(plot_BD,plot_EF,plot_ES) 
@@ -2918,7 +2918,7 @@ rownames (Random.Net.metrics_Grass_p1) <-NULL
 #add additional variables
 Random.Net.metrics_GrassLUI_p1<-Random.Net.metrics_Grass_p1
           #--> up to 50 of loop 74. delete the last and resume after 73 --------------------------
-Random.Net.metrics_GrassLUI_p1$mean_LUI<- rep(LUI_table[,"mean_LUI"],74) #1บ chunk of data has 6734 (i.e. 74)
+Random.Net.metrics_GrassLUI_p1$mean_LUI<- rep(LUI_table[,"mean_LUI"],74) #1ยบ chunk of data has 6734 (i.e. 74)
 Random.Net.metrics_GrassLUI_p1$window_block<- rep(LUI_table[,"window_block"],74)
 Random.Net.metrics_GrassLUI_p1$sim_run<- rep(c(1:74),each=nn)
 Random.Net.metrics_GrassLUI_p1$habitat <- "Grass"
@@ -2933,7 +2933,7 @@ rownames (Random.Net.metrics_Grass_p2) <-NULL
 #add additional variables
 Random.Net.metrics_GrassLUI_p2<-Random.Net.metrics_Grass_p2
           #--> up to 38 of loop 91.------------- 
-Random.Net.metrics_GrassLUI_p2$mean_LUI<- rep(LUI_table[,"mean_LUI"],93) # 2บ part has 8463 (i.e. 93)
+Random.Net.metrics_GrassLUI_p2$mean_LUI<- rep(LUI_table[,"mean_LUI"],93) # 2ยบ part has 8463 (i.e. 93)
 Random.Net.metrics_GrassLUI_p2$window_block<- rep(LUI_table[,"window_block"],93)
 Random.Net.metrics_GrassLUI_p2$sim_run<- rep(c(1:93),each=nn)
 Random.Net.metrics_GrassLUI_p2$habitat <- "Grass"
