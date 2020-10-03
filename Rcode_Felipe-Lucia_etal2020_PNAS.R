@@ -1868,6 +1868,7 @@ Forest_modules_long_low$Variable_name <- factor (Forest_modules_long_low$Variabl
       # 3.2.2 Figure 3 ----
 library("ggforce")
 library (gtable)
+library (mgcViz)                        
 # add parameters required to plot the figure
 Grass_modules_long <- Grass_modules_long [order (Grass_modules_long$variable,Grass_modules_long$nodes),]
 Grass_modules_long$id <- c(rep(c(1:N),2)) # different number for each node
@@ -1916,7 +1917,7 @@ plotG_mods<- ggplot(Grass_modules_long, aes(variable, id = id, value = idd, spli
         axis.text.y = element_blank(),
         plot.title = element_text(hjust = 0.5))+ 
   ggtitle("Grasslands")+  
-  scale_fill_manual(values=c(rep("grey30",15),rep("grey50",3),rep("grey80",12)))+
+  scale_fill_manual(values=c(rep("grey30",15),rep("grey50",6),rep("grey80",9)))+ # number of items in each low LUI module
   scale_y_continuous(expand = c(0, 0.3))+ 
   scale_x_discrete(expand = expand_scale(add = c(0.7, 0.7))) 
 
