@@ -7,13 +7,20 @@
 
 ## DATA REQUIRED ####
 # Data to reproduce the analyses is available at https://www.bexis.uni-jena.de/PublicData/SearchPublicData.aspx 
-# Use the ID number for the search. For the synthesis datasets, individual dataset IDs can be found in the Supplementary Methods of the paper (Felipe-Lucia et al. 2020 PNAS).
+# Use the ID number for the search. 
+# Assembled datasets available: 
+  # Grassland biodiversity (diversity data ID 21766; species information ID 21726), 
+  # Grassland ecosystem functions and services (ID 27087), 
+  # Forest biodiversity (diversity data ID 24607; species information ID 24608), 
+  # Forest ecosystem functions and services (ID 24367).
+# Individual datasets: see IDs provided in parentheses in the Supplementary Methods of the paper (Felipe-Lucia et al. 2020 PNAS).
 # Please note that some datasets will only be available after an embargo period of around 3 years after data collection.
 
+# Datasets and versions used in the analyses:
 # ID 21766: here I used the 190411_EP_species_diversity_GRL.txt # check last update!!
 # ID 21726: here I used the 190411_EP_species_info_GRL.txt      # check last update!!
 # ID 21688: 21688_Assembled functions grassland EPs (2008-2011) for MF synth_1.5.21
-# ID 27087 and 27088: I used Noelle's may 2019 version.txt      # (more updated than BExis (ID 21688) # check last update!!
+# ID 27087 and 27088: I used May 2019 version      # (more updated than BExis (ID 21688) # check last update!!
 # ID xxxx: butterflies_charismatic         # (from Gossner et al paper under review)
 # ID 25086: LUI data from Bexis            # https://www.bexis.uni-jena.de/LuiTool/LuiTool.aspx?DatasetId=25086
   #input data: new datasets > standardized > regional > all Explos > years 2008-2015 > LUI overall > plots: EPs >>> (original file name is LUI_newSet_reg_ov_16.05.2019+171744)
@@ -29,7 +36,7 @@
 # ID 20826: 20826_Basic Information of all Experimental Plots (EPs)_1.7.6
 # ID 14686: 14686_MinSoil_2011_Mineral_Soil_Texture_1.9.6
 # ID 14447: 14447_MinSoil_2011_Mineral_Soil_pH_1.10.12
-# ID xxxxx: Forest_soil_depth              # assembled by Pete Manning
+# ID xxxxx: Forest_soil_depth              # assembled by Pete Manning/Ingo Schöning
 
 # ID 21707 : multidiv: an R function to calculate multidiversity or multifunctionality
 
